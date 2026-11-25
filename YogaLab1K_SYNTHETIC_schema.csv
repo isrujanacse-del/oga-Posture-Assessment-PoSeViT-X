@@ -1,0 +1,13 @@
+column,type,description
+frame_id,string,Synthetic frame identifier (SYN_F#####)
+participant_id,string,Synthetic participant ID; links to participants file
+session,int,Session number (1 in this design)
+pose,categorical,One of 10 target yoga poses
+camera_view,categorical,front / left / right
+form_label,categorical,correct / minor_error / major_error
+annotator_id,string,A1-A3 (synthetic annotator)
+double_annotated,bool,Frame flagged for inter-annotator agreement subset (~15%)
+split,categorical,Participant-level train/val/test (35/7/8); no participant appears in two splits
+synthetic,bool,Always True
+<keypoint>_x / _y,float,"COCO-17 keypoint, normalised body units (not pixels)"
+<keypoint>_conf,float,"Synthetic keypoint confidence, 0.3-1.0"
